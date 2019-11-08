@@ -17,11 +17,10 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        val random = Random.nextInt(0,4)
-
         for ((index, button) in buttonArray.withIndex()) {
             button.setTag(index)
             button.setOnClickListener {
+                val random = Random.nextInt(0,4)
                 val result =  (random == button.tag)
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra("result", result)
