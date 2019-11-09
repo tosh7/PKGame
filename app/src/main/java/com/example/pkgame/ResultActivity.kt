@@ -16,8 +16,10 @@ class ResultActivity : AppCompatActivity() {
 
         if (isGoal) {
             image_view.setImageResource(R.drawable.soccer_score_man)
+            result_text.text = "ゴール！"
         } else {
             image_view.setImageResource(R.drawable.soccer_catch)
+            result_text.text = "しかし止められた"
         }
 
         back_button.setOnClickListener {
